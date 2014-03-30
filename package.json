@@ -2,7 +2,7 @@
   "name": "defcon-rest-gateway",
   "version": "0.0.1",
   "description": "Gateway for RESTful events",
-  "main": "cluster.js",
+  "main": "plugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
