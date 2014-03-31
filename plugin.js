@@ -2,15 +2,20 @@ var express = require('express');
 var _ = require('lodash');
 var uuid = require('uuid');
 
-module.exports = plugin;
+module.exports.create = create;
 
-function plugin(defcon, app, config, next) {
+function create(context, next) {
 
-    var name = 'REST Gateway';
-
+    var app = express();
+    app.disable('x-powered-by');
     app.use(express.bodyParser());
 
-    app.post(defcon.getPluginUrl(name) + '/api/v1/event', function(req, res) {
+    var plugin = {
+        name: 'REST Gateway',        
+        app: app
+    }    
+
+    app.post('/api/v1/event', function(req, res) {
 
         if (!_.isObject(req.body)) return res.send(400, 'Missing body\n');
         if (!req.body.system) return res.send(400, 'A system is required\n');
@@ -29,11 +34,9 @@ function plugin(defcon, app, config, next) {
             link: req.body.link
         }
 
-        defcon.notify('event', event);
+        context.defcon.notify('event', event);
         res.json(200, event);
-    })
+    }) 
 
-    next(null, {
-        name: 'REST Gateway'
-    });
+    next(null, plugin);
 }
