@@ -16,21 +16,6 @@
     "url": "https://github.com/acuminous/defcon-rest-gateway/issues"
   },
   "homepage": "https://github.com/acuminous/defcon-rest-gateway",
-  "devDependencies": {
-    "gulp": "^3.5.6",
-    "gulp-concat": "~2.1.7",
-    "gulp-rename": "~1.2.0",
-    "gulp-plumber": "~0.5.6",
-    "gulp-cache": "~0.1.3",
-    "gulp-svgmin": "~0.4.4",
-    "gulp-ngmin": "~0.1.2",
-    "gulp-less": "~1.2.2",
-    "gulp-buster": "~0.2.1",
-    "gulp-ignore": "~1.0.0",
-    "gulp-uglify": "^0.2.1",
-    "gulp-replace": "^0.2.0",
-    "bower": "^1.3.1"
-  },
   "dependencies": {
     "express": "^3.5.0",
     "async": "^0.2.10",
