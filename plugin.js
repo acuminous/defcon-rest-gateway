@@ -31,10 +31,13 @@ function create(context, next) {
             type: req.body.type,
             timestamp: req.body.timestamp || new Date(),
             message: req.body.message,
-            link: req.body.link
+            link: req.body.link,
+            format: 'defcon/v1'
         }
 
-        context.defcon.notify('event', event);
+        process.nextTick(function() {
+            context.defcon.notify('event', event);
+        })
         res.json(200, event);
     }) 
 
