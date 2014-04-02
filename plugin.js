@@ -23,7 +23,7 @@ function create(context, next) {
 
         var event = {
             id: uuid.v1(),
-            severity: req.body.severity || 1,            
+            severity: /^[1-5]$/.test(req.body.severity) ? req.body.severity : 1,
             system: req.body.system,
             group: req.body.group,
             environment: req.body.environment,
