@@ -1,6 +1,6 @@
 {
   "name": "defcon-rest-gateway",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Gateway for RESTful events",
   "main": "plugin.js",
   "scripts": {
