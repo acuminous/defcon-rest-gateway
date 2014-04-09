@@ -1,6 +1,7 @@
 var express = require('express');
 var _ = require('lodash');
 var uuid = require('uuid');
+var packageJson = require('./package.json');
 
 module.exports.create = create;
 
@@ -11,7 +12,10 @@ function create(context, next) {
     app.use(express.bodyParser());
 
     var plugin = {
-        name: 'REST Gateway',        
+        name: 'REST Gateway', 
+        version: packageJson.version,        
+        description: packageJson.description,
+        repositoryUrl: packageJson.repository.url,
         app: app
     }    
 
