@@ -35,5 +35,5 @@ Notifying DEFCON of events via the REST Gateway Plugin requires you to POST a js
 
 ### Testing from the command line
 ```bash
-curl -i -X POST localhost:8080/plugin/rest-gateway/api/v1/event -H "Content-Type: application/json" -d "{\"system\": \"entertainment-portal\", \"group\": \"www\", \"type\": \"error\", \"environment\": \"production\", \"message\": \"Gateway timeout 504\", \"severity\": \"3\", \"link\": \"http://www.entertainment-portal.com\" }"
+curl -i -X POST localhost:8080/plugin/defcon-rest-gateway/api/v1/event -H "Content-Type: application/json" -d "{\"system\": \"entertainment-portal\", \"group\": \"www\", \"type\": \"error\", \"environment\": \"production\", \"message\": \"Gateway timeout 504\", \"severity\": \"3\", \"link\": \"http://www.entertainment-portal.com\" }"
 ```
