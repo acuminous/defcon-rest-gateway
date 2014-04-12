@@ -25,7 +25,7 @@ function create(context, next) {
         if (!req.body.type) return res.send(400, 'A type is required\n');
 
         var event = {
-            id: uuid.v1(),
+            id: req.body.id || uuid.v1(),
             severity: /^[1-5]$/.test(req.body.severity) ? req.body.severity : 1,
             system: req.body.system,
             group: req.body.group,
@@ -35,7 +35,7 @@ function create(context, next) {
             timestamp: req.body.timestamp || new Date(),
             message: req.body.message,
             link: req.body.link,
-            format: 'defcon/v1'
+            format: req.body.format || 'defcon/v1'
         }
 
         process.nextTick(function() {
