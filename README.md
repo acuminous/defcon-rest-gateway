@@ -30,7 +30,7 @@ Notifying DEFCON of events via the REST Gateway Plugin requires you to POST a js
     "message": "Gateway timeout 504",              // optional
     "severity": "1",                               // 1-5, defaults to 1
     "link": "http://www.entertainment-portal.com"  // optional
-}"
+}
 ```
 
 ### Testing from the command line
