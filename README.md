@@ -4,10 +4,10 @@
 1. [DEFCON](http://github.com/acuminous/defcon)
 
 ## Installation
-1. '''cd $DEFCON_INSTALL_DIR'''
-2. '''npm install defcon-rest-gateway'''
-3. '''Enable and configure 'defcon-rest-gateway' in your DEFCON configuration file, e.g.
-'''json
+1. ```cd $DEFCON_INSTALL_DIR```
+2. ```npm install defcon-rest-gateway```
+3. Enable and configure 'defcon-rest-gateway' in your DEFCON configuration file, e.g.
+```json
 {
     "plugins": {
         "installed": [
@@ -15,8 +15,8 @@
         ]
     }
 }
-'''
-4. Restart defcon (you can do this via '''kill -s USRSIG2 <pid>''' if you want zero downtime)
+```
+4. Restart defcon (you can do this via ```kill -s USRSIG2 <pid>``` if you want zero downtime)
 
 ## Usage
 Notifying DEFCON of events via the REST Gateway Plugin requires you to POST a json object to http://<defcon-host>:<defcon-port>/plugin/rest-gateway/api/v1/event. The json object should be as follows
